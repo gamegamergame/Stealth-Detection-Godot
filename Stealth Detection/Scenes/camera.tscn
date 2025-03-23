@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://brjnmjdulqdym"]
+
+[ext_resource type="Script" path="res://scripts/camera.gd" id="1_kpeti"]
+[ext_resource type="Texture2D" uid="uid://c2nxvtqwunjwo" path="res://icon.svg" id="2_7b18x"]
+[ext_resource type="Script" path="res://scripts/stealth_raycast.gd" id="3_uvu5x"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_kpeti")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_7b18x")
+flip_v = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 400)
+script = ExtResource("3_uvu5x")
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+target_position = Vector2(50, 400)
+script = ExtResource("3_uvu5x")
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+target_position = Vector2(-50, 400)
+script = ExtResource("3_uvu5x")
